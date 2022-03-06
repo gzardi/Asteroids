@@ -1,6 +1,6 @@
 using DataComponents;
+using Tags;
 using Unity.Entities;
-using Unity.Jobs;
 using Unity.Physics;
 using Unity.Mathematics;
 using Unity.Physics.Extensions;
@@ -15,7 +15,9 @@ public class MovementSystem : SystemBase
         var deltaTime = Time.DeltaTime;
 
 
-        Entities.ForEach((Entity player, ref PhysicsVelocity velocity, ref PhysicsMass physicsMass, ref Rotation rotation,
+        Entities
+            .WithAny<PlayerTag>()
+            .ForEach((Entity player, ref PhysicsVelocity velocity, ref PhysicsMass physicsMass, ref Rotation rotation,
             in LocalToWorld localToWorld, in MovementKeys movementKeys, in MovementData movementData) =>
         {
             if (movementKeys.GoForward)
