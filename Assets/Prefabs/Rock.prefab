@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4198400134106845279}
   - component: {fileID: 4198400134106845276}
   m_Layer: 0
-  m_Name: AsteroidCubes
+  m_Name: AsteroidBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,9 +29,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4198400135261173329}
-  - {fileID: 4198400135194120890}
-  - {fileID: 4198400135012697052}
+  - {fileID: 1739412839659771829}
   m_Father: {fileID: 4198400135012816151}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,10 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c35e9b06d84738ad2322edfd12a6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction:
-    x: 0
-    y: 0
-    z: 0
   Speed: 0
   TurnSpeed: 1
 --- !u!114 &4198400134106845276
@@ -91,10 +85,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198400135012697055}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.056444168}
-  m_LocalScale: {x: 2.3523915, y: 1.3896016, z: 1.7320657}
+  m_LocalPosition: {x: 0, y: 0, z: -0.056444503}
+  m_LocalScale: {x: 2.3523917, y: 1.3896016, z: 1.7320659}
   m_Children: []
-  m_Father: {fileID: 4198400134106845278}
+  m_Father: {fileID: 1739412839659771829}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4198400135012697051
@@ -158,6 +152,7 @@ GameObject:
   - component: {fileID: 4198400135012816150}
   - component: {fileID: 4198400135012816137}
   - component: {fileID: 4198400135012816148}
+  - component: {fileID: 6646681367986353029}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -205,10 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c35e9b06d84738ad2322edfd12a6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction:
-    x: 0
-    y: 0
-    z: 0
   Speed: 5
   TurnSpeed: 0
 --- !u!114 &4198400135012816148
@@ -223,6 +214,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccbd0ca49c040c1b706bf917220b584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6646681367986353029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198400135012816136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1d0af736aa4b7e9addab2978cdde4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDead: 0
 --- !u!1 &4198400135194120893
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,10 +253,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198400135194120893}
   m_LocalRotation: {x: -0.47069067, y: 0.3687115, z: 0.04114581, w: 0.80050564}
-  m_LocalPosition: {x: 0, y: 0, z: -0.056444168}
-  m_LocalScale: {x: 1.8806334, y: 1.8806335, z: 1.8806331}
+  m_LocalPosition: {x: 0, y: 0, z: -0.056444503}
+  m_LocalScale: {x: 1.8806334, y: 1.8806336, z: 1.880633}
   m_Children: []
-  m_Father: {fileID: 4198400134106845278}
+  m_Father: {fileID: 1739412839659771829}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -51.621, y: 62.674, z: -26.934}
 --- !u!33 &4198400135194120889
@@ -329,11 +333,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198400135261173328}
-  m_LocalRotation: {x: -0.26000085, y: -0.042972527, z: -0.12194099, w: 0.9569134}
-  m_LocalPosition: {x: 0, y: 0, z: 0.21063995}
-  m_LocalScale: {x: 1.6692998, y: 1.6693002, z: 2.3827589}
+  m_LocalRotation: {x: -0.26000085, y: -0.042972535, z: -0.12194099, w: 0.9569135}
+  m_LocalPosition: {x: 0, y: 0, z: 0.21063897}
+  m_LocalScale: {x: 1.6693001, y: 1.6693003, z: 2.3827586}
   m_Children: []
-  m_Father: {fileID: 4198400134106845278}
+  m_Father: {fileID: 1739412839659771829}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -30.536, y: -1.253, z: -14.182}
 --- !u!33 &4198400135261173340
@@ -385,3 +389,244 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8953958745752294072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739412839659771829}
+  - component: {fileID: 7157501842465526848}
+  - component: {fileID: 7668511766783997205}
+  - component: {fileID: 3283497421369169994}
+  m_Layer: 0
+  m_Name: AsteroidParts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739412839659771829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953958745752294072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4198400135261173329}
+  - {fileID: 4198400135194120890}
+  - {fileID: 4198400135012697052}
+  m_Father: {fileID: 4198400134106845278}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7157501842465526848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953958745752294072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShapeType: 0
+  m_PrimitiveCenter:
+    x: 0.0000039339066
+    y: 0.00000011920929
+    z: 0.084327936
+  m_PrimitiveSize:
+    x: 3.1768942
+    y: 3.0441074
+    z: 3.3606954
+  m_PrimitiveOrientation:
+    Value:
+      x: -0
+      y: 0
+      z: 0
+    RotationOrder: 4
+  m_Capsule:
+    Height: 3.3606954
+    Radius: 1.5884471
+    Axis: 2
+  m_Cylinder:
+    Height: 3.3606954
+    Radius: 1.5884471
+    Axis: 2
+  m_CylinderSideCount: 20
+  m_SphereRadius: 1.6803477
+  m_MinimumSkinnedVertexWeight: 0.1
+  m_ConvexHullGenerationParameters:
+    m_SimplificationTolerance: 0.05041043
+    m_BevelRadius: 0.05
+    m_MinimumAngle: 2.5000002
+  m_CustomMesh: {fileID: 0}
+  m_ForceUnique: 0
+  m_Material:
+    m_SupportsTemplate: 1
+    m_Template: {fileID: 0}
+    m_CollisionResponse:
+      m_Override: 0
+      m_Value: 1
+    m_Friction:
+      m_Override: 0
+      m_Value:
+        Value: 0.5
+        CombineMode: 0
+    m_Restitution:
+      m_Override: 0
+      m_Value:
+        Value: 0
+        CombineMode: 2
+    m_BelongsToCategories:
+      m_Override: 0
+      m_Value:
+        Category00: 1
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
+    m_CollidesWithCategories:
+      m_Override: 0
+      m_Value:
+        Category00: 1
+        Category01: 1
+        Category02: 1
+        Category03: 1
+        Category04: 1
+        Category05: 1
+        Category06: 1
+        Category07: 1
+        Category08: 1
+        Category09: 1
+        Category10: 1
+        Category11: 1
+        Category12: 1
+        Category13: 1
+        Category14: 1
+        Category15: 1
+        Category16: 1
+        Category17: 1
+        Category18: 1
+        Category19: 1
+        Category20: 1
+        Category21: 1
+        Category22: 1
+        Category23: 1
+        Category24: 1
+        Category25: 1
+        Category26: 1
+        Category27: 1
+        Category28: 1
+        Category29: 1
+        Category30: 1
+        Category31: 1
+    m_CustomMaterialTags:
+      m_Override: 0
+      m_Value:
+        Tag00: 0
+        Tag01: 0
+        Tag02: 0
+        Tag03: 0
+        Tag04: 0
+        Tag05: 0
+        Tag06: 0
+        Tag07: 0
+    m_SerializedVersion: 1
+  m_SerializedVersion: 1
+--- !u!114 &7668511766783997205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953958745752294072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccea9ea98e38942e0b0938c27ed1903e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MotionType: 2
+  m_Smoothing: 0
+  m_Mass: 1
+  m_LinearDamping: 0.01
+  m_AngularDamping: 0.05
+  m_InitialLinearVelocity:
+    x: 0
+    y: 0
+    z: 0
+  m_InitialAngularVelocity:
+    x: 0
+    y: 0
+    z: 0
+  m_GravityFactor: 1
+  m_OverrideDefaultMassDistribution: 0
+  m_CenterOfMass:
+    x: 0
+    y: 0
+    z: 0
+  m_Orientation:
+    Value:
+      x: 0
+      y: 0
+      z: 0
+    RotationOrder: 4
+  m_InertiaTensor:
+    x: 0.4
+    y: 0.4
+    z: 0.4
+  m_CustomTags:
+    Tag00: 0
+    Tag01: 0
+    Tag02: 0
+    Tag03: 0
+    Tag04: 0
+    Tag05: 0
+    Tag06: 0
+    Tag07: 0
+--- !u!114 &3283497421369169994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953958745752294072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bebab86f224c40e49e468e4e390f4865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

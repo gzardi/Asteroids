@@ -8,6 +8,7 @@
           <e p="DataComponents" t="Include">
             <e p="AsteroidMovementData.cs" t="Include" />
             <e p="FireKey.cs" t="Include" />
+            <e p="HealthData.cs" t="Include" />
             <e p="MovementData.cs" t="Include" />
             <e p="MovementKeys.cs" t="Include" />
             <e p="ShootData.cs" t="Include" />
@@ -16,12 +17,15 @@
           <e p="Systems" t="Include">
             <e p="AsteroidRotationSystem.cs" t="Include" />
             <e p="BulletMovementSystem.cs" t="Include" />
+            <e p="DeathOnCollisionSystem.cs" t="Include" />
             <e p="MoveFowardSystem.cs" t="Include" />
             <e p="MovementSystem.cs" t="Include" />
+            <e p="RemoveOnDeadSystem.cs" t="Include" />
             <e p="ShootSystem.cs" t="Include" />
           </e>
           <e p="Tags" t="Include">
             <e p="AsteroidTag.cs" t="Include" />
+            <e p="DeathColliderTag.cs" t="Include" />
             <e p="PlayerTag.cs" t="Include" />
             <e p="RotationTag.cs" t="Include" />
           </e>

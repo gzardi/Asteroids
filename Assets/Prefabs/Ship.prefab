@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4880296200605832334}
   - component: {fileID: 4880296200605832329}
   - component: {fileID: 4880296200605832328}
-  - component: {fileID: 4880296200605832335}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: shaft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4880296200605832335
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4880296200605832333}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4880296201840312261
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +100,7 @@ GameObject:
   - component: {fileID: 4880296201840312269}
   - component: {fileID: 8955571886938151147}
   - component: {fileID: 2021939030234605421}
+  - component: {fileID: 3904751394920170250}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -464,3 +451,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7304ed321a742d39cff07443d3481f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3904751394920170250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4880296201840312261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1d0af736aa4b7e9addab2978cdde4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDead: 0
