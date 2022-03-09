@@ -6,11 +6,12 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
 using Unity.Physics.Systems;
+using UnityEngine;
 
 
 namespace Systems.DamageSystems
 {
-    [UpdateBefore(typeof(ResolveDamageSystem))]
+    [UpdateBefore(typeof(BlockSystem))]
     public class DamageCollisionSystem : JobComponentSystem
     {
         private BuildPhysicsWorld buildPhysicsWorld;
@@ -51,6 +52,7 @@ namespace Systems.DamageSystems
                     {
                         if (DamageGroup.HasComponent(triggerEvent.EntityB))
                         {
+                            Debug.Log(triggerEvent.EntityA + "daño a  :" + triggerEvent.EntityB);
                             DamageGroup[triggerEvent.EntityB].Add(new Damage
                             {
                                 Value = DealDamageGroup[triggerEvent.EntityA].Value
@@ -65,6 +67,7 @@ namespace Systems.DamageSystems
                     {
                         if (DamageGroup.HasComponent(triggerEvent.EntityA))
                         {
+                            Debug.Log(triggerEvent.EntityB + "daño a  :" + triggerEvent.EntityA);
                             DamageGroup[triggerEvent.EntityA].Add(new Damage
                             {
                                 Value = DealDamageGroup[triggerEvent.EntityB].Value

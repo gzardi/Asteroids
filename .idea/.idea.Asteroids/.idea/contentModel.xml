@@ -7,11 +7,12 @@
         <e p="Scripts" t="Include">
           <e p="DataComponents" t="Include">
             <e p="DamageData" t="Include">
+              <e p="BlockDamageData.cs" t="Include" />
               <e p="Damage.cs" t="Include" />
               <e p="DamageableAuthoring.cs" t="Include" />
               <e p="DealDamage.cs" t="Include" />
+              <e p="HealthData.cs" t="Include" />
             </e>
-            <e p="HealthData.cs" t="Include" />
             <e p="MovementData" t="Include">
               <e p="Enemys" t="Include">
                 <e p="AsteroidMovementData.cs" t="Include" />
@@ -32,8 +33,10 @@
           </e>
           <e p="Systems" t="Include">
             <e p="DamageSystems" t="Include">
+              <e p="BlockSystem.cs" t="Include" />
               <e p="DamageCollisionSystem.cs" t="Include" />
               <e p="DeathCleanupSystem.cs" t="Include" />
+              <e p="DestroyOnCollisionWithPlayerSystem.cs" t="Include" />
               <e p="DestroyOnContactSystem.cs" t="Include" />
               <e p="ResolveDamageSystem.cs" t="Include" />
             </e>
@@ -52,6 +55,7 @@
             <e p="DamageTags" t="Include">
               <e p="DeadTag.cs" t="Include" />
               <e p="DeathColliderTag.cs" t="Include" />
+              <e p="DestroyOnCollisionWithPlayerTag.cs" t="Include" />
               <e p="DestroyOnContactTag.cs" t="Include" />
             </e>
             <e p="EnemysTags" t="Include">

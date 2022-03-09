@@ -7,7 +7,7 @@ using Unity.Physics.Systems;
 
 namespace Systems.DamageSystems
 {
-    public class DestroyOnContactSystem : JobComponentSystem
+    public class DestroyOnCollisionWithPlayerSystem : JobComponentSystem
     {
         private EndSimulationEntityCommandBufferSystem ecbSystem;
         private BuildPhysicsWorld buildPhysicsWorld;
@@ -24,18 +24,22 @@ namespace Systems.DamageSystems
         {
             var destroyOnContactGroup = GetComponentDataFromEntity<DestroyOnContactTag>(true);
             
+            var PlayerGroup = GetComponentDataFromEntity<PlayerTag>(true);
+            
             var ecb = ecbSystem.CreateCommandBuffer();
 
             var destroyTriggerJob = new DestroyTriggerJob
             {
                 Ecb = ecb,
-                destroyOnContactGroup = destroyOnContactGroup
+                destroyOnContactGroup = destroyOnContactGroup,
+                playerGroup = PlayerGroup
             };
             
             var destroyCollisionJob = new DestroyCollisionJob
             {
                 Ecb = ecb,
-                DestroyOnContactGroup = destroyOnContactGroup
+                DestroyOnContactGroup = destroyOnContactGroup,
+                playerGroup = PlayerGroup
                 
             };
 
@@ -51,14 +55,15 @@ namespace Systems.DamageSystems
         {
             public EntityCommandBuffer Ecb;
             [ReadOnly] public ComponentDataFromEntity<DestroyOnContactTag> destroyOnContactGroup;
-            
+            [ReadOnly] public ComponentDataFromEntity<PlayerTag> playerGroup;
+
             public void Execute(TriggerEvent triggerEvent)
             {
-                if (destroyOnContactGroup.HasComponent(triggerEvent.EntityA))
+                if (destroyOnContactGroup.HasComponent(triggerEvent.EntityA) && playerGroup.HasComponent(triggerEvent.EntityB))
                 {
                     Ecb.DestroyEntity(triggerEvent.EntityA);
                 }
-                if (destroyOnContactGroup.HasComponent(triggerEvent.EntityB))
+                if (destroyOnContactGroup.HasComponent(triggerEvent.EntityB) && playerGroup.HasComponent(triggerEvent.EntityA))
                 {
                     Ecb.DestroyEntity(triggerEvent.EntityB);
                 }
@@ -69,14 +74,15 @@ namespace Systems.DamageSystems
         {
             public EntityCommandBuffer Ecb;
             [ReadOnly] public ComponentDataFromEntity<DestroyOnContactTag> DestroyOnContactGroup;
-            
+            [ReadOnly] public ComponentDataFromEntity<PlayerTag> playerGroup;
+
             public void Execute(CollisionEvent collisionEvent)
             {
-                if (DestroyOnContactGroup.HasComponent(collisionEvent.EntityA))
+                if (DestroyOnContactGroup.HasComponent(collisionEvent.EntityA) && playerGroup.HasComponent(collisionEvent.EntityB))
                 {
                     Ecb.DestroyEntity(collisionEvent.EntityA);
                 }
-                if (DestroyOnContactGroup.HasComponent(collisionEvent.EntityB))
+                if (DestroyOnContactGroup.HasComponent(collisionEvent.EntityB) && playerGroup.HasComponent(collisionEvent.EntityA))
                 {
                     Ecb.DestroyEntity(collisionEvent.EntityB);
                 }
