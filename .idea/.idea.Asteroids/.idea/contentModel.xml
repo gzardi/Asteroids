@@ -6,28 +6,61 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="DataComponents" t="Include">
-            <e p="AsteroidMovementData.cs" t="Include" />
-            <e p="FireKey.cs" t="Include" />
+            <e p="DamageData" t="Include">
+              <e p="Damage.cs" t="Include" />
+              <e p="DamageableAuthoring.cs" t="Include" />
+              <e p="DealDamage.cs" t="Include" />
+            </e>
             <e p="HealthData.cs" t="Include" />
-            <e p="MovementData.cs" t="Include" />
-            <e p="MovementKeys.cs" t="Include" />
-            <e p="ShootData.cs" t="Include" />
-            <e p="ShooterData.cs" t="Include" />
+            <e p="MovementData" t="Include">
+              <e p="Enemys" t="Include">
+                <e p="AsteroidMovementData.cs" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="MovementData.cs" t="Include" />
+                <e p="MovementKeys.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SpawnDatas" t="Include">
+              <e p="ShootData" t="Include">
+                <e p="FireKey.cs" t="Include" />
+                <e p="ShootData.cs" t="Include" />
+                <e p="ShooterData.cs" t="Include" />
+              </e>
+              <e p="SpawnPlayerData.cs" t="Include" />
+            </e>
           </e>
           <e p="Systems" t="Include">
-            <e p="AsteroidRotationSystem.cs" t="Include" />
-            <e p="BulletMovementSystem.cs" t="Include" />
-            <e p="DeathOnCollisionSystem.cs" t="Include" />
-            <e p="MoveFowardSystem.cs" t="Include" />
-            <e p="MovementSystem.cs" t="Include" />
-            <e p="RemoveOnDeadSystem.cs" t="Include" />
-            <e p="ShootSystem.cs" t="Include" />
+            <e p="DamageSystems" t="Include">
+              <e p="DamageCollisionSystem.cs" t="Include" />
+              <e p="DeathCleanupSystem.cs" t="Include" />
+              <e p="DestroyOnContactSystem.cs" t="Include" />
+              <e p="ResolveDamageSystem.cs" t="Include" />
+            </e>
+            <e p="MovementSystems" t="Include">
+              <e p="AsteroidRotationSystem.cs" t="Include" />
+              <e p="BulletMovementSystem.cs" t="Include" />
+              <e p="MoveFowardSystem.cs" t="Include" />
+              <e p="MovementSystem.cs" t="Include" />
+            </e>
+            <e p="SpawnSystems" t="Include">
+              <e p="ShootSystem.cs" t="Include" />
+              <e p="SpawnPlayerSystem.cs" t="Include" />
+            </e>
           </e>
           <e p="Tags" t="Include">
-            <e p="AsteroidTag.cs" t="Include" />
-            <e p="DeathColliderTag.cs" t="Include" />
-            <e p="PlayerTag.cs" t="Include" />
-            <e p="RotationTag.cs" t="Include" />
+            <e p="DamageTags" t="Include">
+              <e p="DeadTag.cs" t="Include" />
+              <e p="DeathColliderTag.cs" t="Include" />
+              <e p="DestroyOnContactTag.cs" t="Include" />
+            </e>
+            <e p="EnemysTags" t="Include">
+              <e p="AsteroidTag.cs" t="Include" />
+              <e p="RotationTag.cs" t="Include" />
+            </e>
+            <e p="PlayerTags" t="Include">
+              <e p="PlayerTag.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>

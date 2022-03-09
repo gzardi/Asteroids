@@ -14,15 +14,17 @@ namespace DataComponents
         public KeyCode Left;
         
         public KeyCode Right;
-        
-        
-        public bool GoForward => Input.GetKey(Forward);
-        
-        public bool GoBackward => Input.GetKey(Backward);
-        
-        public bool GoLeft => Input.GetKey(Left);
-        
-        public bool GoRight => Input.GetKey(Right);
 
+        public KeyCode SpawnKey;
+
+
+        public bool GoForward => Input.GetKey(Forward);
+
+        public bool GoBackward => Input.GetKey(Backward);
+
+        public bool GoLeft => Input.GetKey(Left);
+
+        public bool GoRight => Input.GetKey(Right);
+        public bool SpawnPlayer => Input.GetKeyDown(SpawnKey);
     }
 }
