@@ -36,8 +36,9 @@
               <e p="BlockSystem.cs" t="Include" />
               <e p="DamageCollisionSystem.cs" t="Include" />
               <e p="DeathCleanupSystem.cs" t="Include" />
-              <e p="DestroyOnCollisionWithPlayerSystem.cs" t="Include" />
               <e p="DestroyOnContactSystem.cs" t="Include" />
+              <e p="DestroyOnTriggerSystem.cs" t="Include" />
+              <e p="PowerUpSystem.cs" t="Include" />
               <e p="ResolveDamageSystem.cs" t="Include" />
             </e>
             <e p="MovementSystems" t="Include">
@@ -60,6 +61,7 @@
             </e>
             <e p="EnemysTags" t="Include">
               <e p="AsteroidTag.cs" t="Include" />
+              <e p="EnemyTag.cs" t="Include" />
               <e p="RotationTag.cs" t="Include" />
             </e>
             <e p="PlayerTags" t="Include">
